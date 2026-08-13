@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-green-dark: #1b3e1b;
+  --color-green: #2e7d32;
+  --color-green-light: #4caf50;
+  --color-brown: #6d4c41;
+  --color-brown-light: #8d6e63;
+  --color-cream: #f9f6f1;
+  --color-white: #ffffff;
+  --color-text: #2b2b2b;
+  --shadow-soft: 0 4px 16px rgba(0, 0, 0, 0.08);
+  --radius: 12px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  color: var(--color-text);
+  background-color: var(--color-cream);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.section-container {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem;
+}
+
+.section-heading {
+  font-size: 2rem;
+  color: var(--color-green-dark);
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.section-subheading {
+  color: #555;
+  max-width: 600px;
+  margin-bottom: 2.5rem;
+}
+
+.center {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.8rem 1.6rem;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  border: 2px solid transparent;
+  transition: all 0.25s ease;
+}
+
+.btn-primary {
+  background-color: var(--color-green);
+  color: var(--color-white);
+}
+
+.btn-primary:hover {
+  background-color: var(--color-green-dark);
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--color-white);
+  border-color: var(--color-white);
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-white);
+  color: var(--color-green-dark);
+  transform: translateY(-2px);
+}
+
+/* Fade-in on scroll animation */
+.fade-in {
+  opacity: 0;
+  transform: translateY(24px);
+  animation: fadeInUp 0.9s ease forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
